@@ -1,7 +1,15 @@
 function verificaOChute(chute){
     const numero= +chute;
 
-    if (chuteForInvalido(numero)){
+    if (chute === 'game over'){
+        document.body.innerHTML = `
+        <h2>GAME OVER!</h2>
+        <h3>O numero secreto era ${numeroSecreto}</h3>
+        <button onclick='jogarDnv()' class="btn-jogar">Jogar Novamente</button>
+        `
+    }
+
+    if (chuteForInvalido(numero) && chute !== 'game over'){
         elementoChute.innerHTML +='<div>valor inválido</div>'
         return
     }
@@ -9,6 +17,10 @@ function verificaOChute(chute){
     if(numeroForaDosParametros(numero)){
        elementoChute.innerHTML +=`<div> Fale um numero entre ${menorValor} e ${maiorValor}</div>`
        return
+    }
+
+    if (chute === "game over"){
+        
     }
 
     if (numero === numeroSecreto) {
