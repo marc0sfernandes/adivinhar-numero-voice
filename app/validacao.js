@@ -1,26 +1,21 @@
-function verificaOChute(chute){
-    const numero= +chute;
+function verificaOChute(chute) {
+    const numero = +chute;
 
-    if (chute === 'game over'){
+    if (chute === 'game over') {
         document.body.innerHTML = `
         <h2>GAME OVER!</h2>
-        <h3>O numero secreto era ${numeroSecreto}</h3>
         <button onclick='jogarDnv()' class="btn-jogar">Jogar Novamente</button>
         `
     }
 
-    if (chuteForInvalido(numero) && chute !== 'game over'){
-        elementoChute.innerHTML +='<div>valor inválido</div>'
+    if (chuteForInvalido(numero) && chute !== 'game over') {
+        elementoChute.innerHTML += '<div>valor inválido</div>'
         return
     }
 
-    if(numeroForaDosParametros(numero)){
-       elementoChute.innerHTML +=`<div> Fale um numero entre ${menorValor} e ${maiorValor}</div>`
-       return
-    }
-
-    if (chute === "game over"){
-        
+    if (numeroForaDosParametros(numero)) {
+        elementoChute.innerHTML += `<div> Fale um numero entre ${menorValor} e ${maiorValor}</div>`
+        return
     }
 
     if (numero === numeroSecreto) {
@@ -40,10 +35,10 @@ function chuteForInvalido(numero) {
     return Number.isNaN(numero);
 }
 
-function numeroForaDosParametros(numero){
+function numeroForaDosParametros(numero) {
     return numero > maiorValor || numero < menorValor;
 }
 
-function jogarDnv(){
+function jogarDnv() {
     location.reload();
 }

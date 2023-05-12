@@ -6,7 +6,7 @@
     --primary-color: #ffffff;
 }
 
-body{
+body {
     background-color: var(--bg-color);
     color: var(--primary-color);
     min-height: 100vh;
@@ -19,11 +19,11 @@ body{
     font-family: var(--font-family);
 }
 
-h1{
+h1 {
     font-size: 5em;
 }
 
-h2{
+h2 {
     font-size: 4em;
 }
 
@@ -37,7 +37,7 @@ h3 {
     margin-top: 40px;
 }
 
-.box{
+.box {
     border: 2px solid var(--primary-color);
     display: inline-block;
     font-size: 4em;
@@ -45,10 +45,10 @@ h3 {
     margin: 20px;
 }
 
-.btn-jogar{
+.btn-jogar {
     padding: 8px 15px;
-    border:0;
-    background:var(--primary-color);
+    border: 0;
+    background: var(--primary-color);
     border-radius: 3px;
     margin-top: 20px;
 }

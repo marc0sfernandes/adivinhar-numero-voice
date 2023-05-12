@@ -1,16 +1,16 @@
-const menorValor= 1;
-const maiorValor= 1000;
+const menorValor = 1;
+const maiorValor = 1000;
 const numeroSecreto = gerarNumeroAleatorio();
 
 
-function gerarNumeroAleatorio(){
-    return parseInt(Math.random()* maiorValor + 1)
+function gerarNumeroAleatorio() {
+    return parseInt(Math.random() * maiorValor + 1)
 }
 
-console.log("Seu numero secreto é: "+numeroSecreto);
+console.log("Seu numero secreto é: " + numeroSecreto);
 
 const elementoMenorValor = document.getElementById("menor-valor");
-elementoMenorValor.innerHTML= menorValor;
+elementoMenorValor.innerHTML = menorValor;
 
 const elementoMaiorValor = document.getElementById("maior-valor");
-elementoMaiorValor.innerHTML= maiorValor;
+elementoMaiorValor.innerHTML = maiorValor;
